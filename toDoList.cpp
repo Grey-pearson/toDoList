@@ -39,9 +39,30 @@ void addTask()
     tasks.push_back(newTask);
 }
 
-void deleteTask()
+void deleteTask() // i think the switch was a good idea but it neeeds exact values and i cant do that for greater than 1, so probably going to need if else if? :(
 {
-    cout << "which task would you like to delete?";
+
+    switch (tasks.size())
+    {
+        case 0:
+            cout << "youve got zero tasks" << endl;
+            break;
+        case  1: 
+            cout << "youve got 1 task" << endl;
+            break;
+        case >1:
+             cout << "multiple options here" << endl;
+             break;
+        default:
+            break;
+    }
+    /*
+    int numSelected;
+    cout << "which task would you like to delete? 1-" << tasks.size() << ": ";
+    cin >> numSelected;
+    cout << "you picked: " << numSelected << endl;*/
+    
+    
 }
 
 int main()
@@ -65,8 +86,7 @@ int main()
                 addTask();
                 break;
             case 3:
-                cout << "you chose 3!" << endl;
-                //cout << endl;
+                deleteTask();
                 break;
 
             default: cout << "could not read your choice" << endl; // not intended number goes ok but any letter breaks it idk why

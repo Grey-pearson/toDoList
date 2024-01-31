@@ -1,2 +1,2 @@
 ﻿  toDoList.cpp
-  toDoList.vcxproj -> C:\Users\greyt\code\toDoList\x64\Debug\toDoList.exe
+C:\Users\greyt\code\toDoList\toDoList.cpp(53,14): error C2059: syntax error: '>'
