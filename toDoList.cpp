@@ -41,21 +41,28 @@ void addTask()
 
 void deleteTask() // i think the switch was a good idea but it neeeds exact values and i cant do that for greater than 1, so probably going to need if else if? :(
 {
+    int numOfTasks = tasks.size();
+    int selectedTask;
+    if (numOfTasks == 0)
+        {
+            cout << "you have no tasks" << endl;
+        }else if (numOfTasks == 1)
+        {
+            cout << "want to delete the only task? 1 for yes, 2 for no: ";
+            cin >> selectedTask;
+            if (selectedTask == 1)
+            {
+                tasks.clear();
+            }
+            else { cout << "left single task alone" << endl << endl; }
 
-    switch (tasks.size())
-    {
-        case 0:
-            cout << "youve got zero tasks" << endl;
-            break;
-        case  1: 
-            cout << "youve got 1 task" << endl;
-            break;
-        case >1:
-             cout << "multiple options here" << endl;
-             break;
-        default:
-            break;
-    }
+        } else 
+        {
+            cout << "select 1- " << numOfTasks << " for which task you want deleted: ";
+            cin >> selectedTask;
+            cout << endl << selectedTask << endl;
+            tasks.erase(tasks.begin() + (selectedTask - 1));
+        }
     /*
     int numSelected;
     cout << "which task would you like to delete? 1-" << tasks.size() << ": ";

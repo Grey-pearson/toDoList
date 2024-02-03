@@ -1,2 +1,3 @@
 ﻿  toDoList.cpp
-C:\Users\greyt\code\toDoList\toDoList.cpp(53,14): error C2059: syntax error: '>'
+C:\Users\greyt\code\toDoList\toDoList.cpp(44,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  toDoList.vcxproj -> C:\Users\greyt\code\toDoList\x64\Debug\toDoList.exe
